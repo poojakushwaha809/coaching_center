@@ -1,0 +1,28 @@
+<%= form_for @batch do |f| %>  
+
+  <%= f.collection_select :faculty_id, Faculty.order(:faculty_name),:id,:faculty_name, include_blank: true %>
+
+  <p>
+    <%= f.label :Batch_name %><br>
+    <%= f.text_field :batch_name %>
+  </p>
+
+  <p>
+    <%= f.label :Batch_start_timing %><br>
+    <%= f.time_select :start_at %>
+  </p>
+ 
+ <p>
+    <%= f.label :Batch_end_timing %><br>
+    <%= f.time_select :end_at %>
+  </p>
+ 
+ 
+  
+  <p>
+    <%= f.submit %>
+  </p>
+  
+<% end %>
+
+    <%= link_to 'batches back', batches_path %> |

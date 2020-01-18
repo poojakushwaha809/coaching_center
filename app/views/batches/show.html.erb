@@ -1,0 +1,21 @@
+
+<p>
+	<strong>Batch name</strong>
+	<%= @batch.batch_name %>
+</p> 
+
+<p>
+	<strong>batch end timing</strong>
+	<%= @batch.start_at %>
+</p>
+
+<p>
+	<strong>batch start timing</strong>
+	<%= @batch.end_at %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_batch_path(@batch) %> |
+
+<%= link_to 'Back', batches_path %>

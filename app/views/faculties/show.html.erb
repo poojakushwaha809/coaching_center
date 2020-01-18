@@ -1,0 +1,21 @@
+
+<p>
+	<strong>Faculty_name</strong>
+	<%= @faculty.faculty_name %>
+</p> 
+
+<p>
+	<strong>Contact</strong>
+	<%= @faculty.contact %>
+</p>
+
+<p>
+	<strong>Email</strong>
+	<%= @faculty.email %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_faculty_path(@faculty) %> |
+
+<%= link_to 'Back', faculties_path %>
