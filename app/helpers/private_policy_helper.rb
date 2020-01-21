@@ -1,0 +1,2 @@
+module PrivatePolicyHelper
+end

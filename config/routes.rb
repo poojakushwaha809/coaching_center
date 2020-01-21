@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-	 root  "faculties#new"
+	 root  "batches#index"
 
 
 	  get 'homes/home', to: 'homes#home'
@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
 
   devise_for :admins
- root  "faculties#new"
 
 	resources :faculties
 	resources :batches

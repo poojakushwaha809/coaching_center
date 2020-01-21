@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+
+
+
   <head>
     <title>Institute</title>
     <%= csrf_meta_tags %>
@@ -7,8 +10,25 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
+         <style>
+           
+           header
+        {background-color: powderblue;
+        padding: 02px;
+        text-align: right;
+        font-size: 18px;
+        }
+
+
+        body{color: black;
+          background-color: #b2cecf}
+
+    
+
+         </style>
+        
+   
   <body>
 
            <p class="notice"><%= notice %></p>
@@ -16,26 +36,10 @@
 
 
       
-    <p class="navbar-text float-right">
-
-    <%= link_to "Home",homes_home_path, :class => 'navbar-link' %>  &nbsp;&nbsp;&nbsp;&nbsp;
-    <%= link_to "Contact Us",contacts_contact_path, :class => 'navbar-link' %>  &nbsp;&nbsp;&nbsp;&nbsp;
-    <%= link_to "About US",about_us_path, :class => 'navbar-link'%> &nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-    <% if admin_signed_in? %>
-     
-      <%= link_to 'Edit profile', edit_admin_registration_path, :class => 'navbar-link' %> &nbsp;&nbsp;&nbsp;&nbsp;
-      <%= link_to "Logout", destroy_admin_session_path, method: :delete, :class => 'navbar-link'  %>
-
-
-
-    <% else %>
-      <%= link_to "Sign up", new_admin_registration_path, :class => 'navbar-link'  %> &nbsp;&nbsp;&nbsp;&nbsp;
-      <%= link_to "Login", new_admin_session_path, :class => 'navbar-link'  %>
-    <% end %>
+   <%= render 'layouts/header' %>
 
     <%= yield %>
+
+
   </body>
 </html>
